@@ -50,7 +50,7 @@ jobs:
           restore-keys: ${{ runner.os }}-cargo-build-target-
 
       - name: Build binary
-        run: cargo build --release --features vendored_openssl
+        run: cargo build --release --features sqlite,vendored_openssl
 
       - name: Strip binary
         run: strip target/release/vaultwarden
